@@ -1,0 +1,47 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+		
+		<div class="container-fluid">
+		<div class="col-md-12">
+			<hr>
+		</div>
+		<div class="col-md-6 text-muted">
+			页次：${currentPage}/${pageCount }页 &nbsp;
+			每页显示：${pageSize }条 &nbsp;
+			总记录数：${recordCount }条
+		</div>
+		<div class="col-md-6">
+          <nav style="text-align: right;">
+            <ul class="pagination" >
+              <li>
+                <a href="javascript: gotoPage(1)" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <s:iterator begin="1" end="%{pageCount}" var="num">
+				<li <s:if test="#num==currentPage"> class="active" </s:if> ><a href="javascript: gotoPage(${num})"> ${num} </a></li>
+				</s:iterator>
+              <li>
+                <a href="javascript: gotoPage(${pageCount})" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        </div>
+		
+		
+
+
+
+
+<script type="text/javascript">
+	function gotoPage( pageNum ){
+		// window.location.href = "forum_show.action?id=${id}&pageNum=" + pageNum;
+		
+		$(document.forms[0]).append("<input type='hidden' name='pageNum' value='" + pageNum +"'>");
+		document.forms[0].submit();
+	}
+</script>

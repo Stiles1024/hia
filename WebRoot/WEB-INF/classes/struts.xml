@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <!-- 配置为开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 把扩展名配置为action -->
+    <!-- 把主题配置为simple -->
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.custom.i18n.resources" value="message"></constant>  
+	<constant name="struts.action.excludePattern" value="/emeditor/.*" />
+<!--   <constant name="struts.action.extension" value="action" />
+    权限控制模块 可能用到
+    问题：网站前后台 分两个web应用？
+  -->
+<constant name="struts.action.extension" value="action" />
+
+<include file="struts-config/gcategory.xml"></include>
+<include file="struts-config/gattribute.xml"></include>
+<include file="struts-config/gattrrange.xml"></include>
+<include file="struts-config/ggoods.xml"></include>
+<include file="struts-config/gcommentlong.xml"></include>
+<include file="struts-config/gcommentbrief.xml"></include>
+
+<include file="struts-config/home.xml"></include>
+<include file="struts-config/gbrand.xml"></include>
+<include file="struts-config/uuser.xml"></include>
+
+<include file="struts-config/umessage.xml"></include>
+
+<include file="struts-config/urole.xml"></include>
+<include file="struts-config/sysuser.xml"></include>
+<include file="struts-config/usyslog.xml"></include>
+<include file="struts-config/uevent.xml"></include>
+<include file="struts-config/upocket.xml"></include>
+<package name="base" namespace="/" extends="struts-default">
+
+    	
+    		
+    		
+
+
+		<!-- 全局的Result配置 -->
+		<global-results>
+			<result name="loginUI">/WEB-INF/jsp/uuserAction/loginUI.jsp</result>
+			<result name="noPrivilegeError">/noPrivilegeError.jsp</result>
+		</global-results>
+
+    	<!-- 测试struts 未与spring整合  -->
+    		<!-- 当与spring整合后 class可写bean -->
+    				<!-- <action name="test" class="cn.oa.test.TestAction"> -->
+    				
+        <action name="test" class="testAction">
+        		<result name="success">test.jsp</result>
+        </action>
+        
+        
+		
+	
+      
+      
+       
+        
+    </package>
+
+    <!-- Add packages here -->
+
+</struts>

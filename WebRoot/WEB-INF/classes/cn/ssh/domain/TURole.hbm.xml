@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.ssh.domain">
+
+	<class name="TURole" table="t_u_role">
+		<id name="roleId">
+			<column name="role_id" />
+            <generator class="native"/>
+		</id>
+		<property name="name" />
+		<property name="description" />
+		
+		<!-- users属性 本类与User多对多关系 -->
+					<set name="users" table="t_u_user_role"  lazy="false">
+						<key column="role_id" foreign-key="none"></key>
+						<many-to-many class="TUUser" column="user_id" foreign-key="none"></many-to-many>
+					</set>
+					
+		<!-- privileges 本类与Privilege多对多关系 -->
+					<set name="privilegs" table="t_u_role_privilege"  lazy="false" >
+						<key column="role_id"  foreign-key="none"></key>
+						<many-to-many class="TUPrivilege" column="privilege_id" foreign-key="none"></many-to-many>
+					</set>
+		
+	</class>
+	
+</hibernate-mapping>

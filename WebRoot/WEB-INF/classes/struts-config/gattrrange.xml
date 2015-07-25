@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	
+     <package name="gattrrange" namespace="/" extends="base">
+		<!-- 产品分类Action-->
+         <action name="gattrrange_*" class="gAttrRangeAction" method="{1}">
+        	<result name="list">/WEB-INF/jsp/gattrrangeAction/list.jsp</result>
+        	<result name="saveUI">/WEB-INF/jsp/gattrrangeAction/saveUI.jsp</result>
+        	<result name="tolist" type="redirectAction">gattrrange_list?attrId=${attrId}</result>
+        </action>  
+        </package> 
+	
+
+</struts>

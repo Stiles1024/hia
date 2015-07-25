@@ -1,0 +1,79 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<!-- 1，数据库连接信息 -->
+	<!--  
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="hibernate.connection.driver_class">com.jdbc.mysql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql:///oa_db</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+	-->
+
+	<!-- 2，其他配置文件 -->
+
+	<property name="hibernate.hbm2ddl.auto">update</property>
+	<property name="hibernate.show_sql">true</property>
+
+
+
+	<!-- 3，导入映射文件-->
+	<mapping resource="cn/ssh/domain/TGAttribute.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGAttrRange.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGBrand.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGCategory.hbm.xml" />
+
+	<mapping resource="cn/ssh/domain/TGGoods.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGGoodsAttr.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGGoodsImg.hbm.xml" />
+
+
+
+
+	<mapping resource="cn/ssh/domain/TUCollection.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUCollectionContent.hbm.xml" />
+
+
+
+	<mapping resource="cn/ssh/domain/TUFollower.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUMessage.hbm.xml" />
+
+
+
+
+	<mapping resource="cn/ssh/domain/TUUser.hbm.xml" />
+
+
+	<mapping resource="cn/ssh/domain/TUSyslog.hbm.xml" />
+
+	<mapping resource="cn/ssh/domain/TUPrivilege.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TURole.hbm.xml" />
+
+
+	<mapping resource="cn/ssh/domain/TUPocket.hbm.xml" />
+
+	<mapping resource="cn/ssh/domain/TUTimeline.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUNotepad.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUPocketContent.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUFavLookcoll.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUEvaluateLookcoll.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUDream.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUDreamContent.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TUDreamSendreceive.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TULook.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TULookContent.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGGoodscollShare.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGGoodsEvaluate.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGGoodsEvaluateImg.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGGoodsDiscount.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGBrandCate.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGBrandDiscount.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGBrandAddress.hbm.xml" />
+	<mapping resource="cn/ssh/domain/TGBrandFocus.hbm.xml" />
+
+
+</session-factory>
+</hibernate-configuration>

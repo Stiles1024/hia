@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="struts-config/ggoods.xml"></include>
+	<package name="gcommentlong" namespace="/" extends="base">
+		<!-- 产品分类Action -->
+        <action name="gcommentlong_*" class="gCommentLongAction" method="{1}">
+        	<result name="del" type="redirectAction">ggoods_longcomment?goodsId=%{goodsId}</result>
+        </action>
+       <!--  商品Action -->
+	</package>
+
+</struts>

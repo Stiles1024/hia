@@ -16,6 +16,10 @@ $RECYCLE.BIN/
 *.jpg
 # Windows shortcuts
 *.lnk
+/WebRoot/ckeditor
+/WebRoot/script
+/WebRoot/style
+/WebRoot/umeditor
 
 # =========================
 # Operating System Files

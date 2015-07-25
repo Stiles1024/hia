@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<package name="umessage" namespace="/" extends="base">
+        <action name="umessage_*" class="uMessageAction" method="{1}">
+        	<result name="list">/WEB-INF/jsp/umessageAction/list.jsp</result>
+        	<result name="saveUI">/WEB-INF/jsp/umessageAction/saveUI.jsp</result>
+        	<result name="editUI">/WEB-INF/jsp/umessageAction/saveUI.jsp</result>
+        	<result name="tolist" type="redirectAction">umessage_list</result>
+        	<!--
+        	<result name="add" type="redirectAction">ggoods_list</result>
+        	-->
+        </action>
+	</package>
+
+</struts>
