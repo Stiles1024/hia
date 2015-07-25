@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="mysql" database="muyin_db" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="t_g_attr_range">
+      <Drawing expanded="true" location="0,652" dimensions="272,91" />
+      <Columns>
+        <Column name="cat_range_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="attr_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="value" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_attribute">
+      <Drawing expanded="true" location="181,1293" dimensions="289,111" />
+      <Columns>
+        <Column name="attr_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="cat_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="attr_name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="60" />
+        </Column>
+        <Column name="attr_input_type" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_brand">
+      <Drawing expanded="true" location="1436,1644" dimensions="272,151" />
+      <Columns>
+        <Column name="brand_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="brand_name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="brand_brief" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="logo" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="sit_url" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="sort_order" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_category">
+      <Drawing expanded="true" location="654,1624" dimensions="273,191" />
+      <Columns>
+        <Column name="cat_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="cat_name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="90" />
+        </Column>
+        <Column name="keywords" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="cat_desc" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="p_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="sort_order" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="show_in_nav" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="is_show" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_comment_brief">
+      <Drawing expanded="true" location="1946,642" dimensions="286,111" />
+      <Columns>
+        <Column name="comment_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="goods_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="MEDIUMINT UNSIGNED" size="8" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="content" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_comment_long">
+      <Drawing expanded="true" location="2332,642" dimensions="286,111" />
+      <Columns>
+        <Column name="comment_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="goods_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="MEDIUMINT UNSIGNED" size="8" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="content" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_goods_attr">
+      <Drawing expanded="true" location="372,642" dimensions="293,111" />
+      <Columns>
+        <Column name="goods_attr_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="goods_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="MEDIUMINT UNSIGNED" size="8" />
+        </Column>
+        <Column name="attr_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="attr_value" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_goods_cat">
+      <Drawing expanded="true" location="765,652" dimensions="289,91" />
+      <Columns>
+        <Column name="goods_cat_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="goods_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="MEDIUMINT UNSIGNED" size="8" />
+        </Column>
+        <Column name="cat_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_goods_img">
+      <Drawing expanded="true" location="1551,652" dimensions="295,91" />
+      <Columns>
+        <Column name="goods_img_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="goods_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="MEDIUMINT UNSIGNED" size="8" />
+        </Column>
+        <Column name="value" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_g_goods">
+      <Drawing expanded="true" location="1356,1173" dimensions="288,351" />
+      <Columns>
+        <Column name="goods_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="MEDIUMINT UNSIGNED" size="8" />
+        </Column>
+        <Column name="goods_name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="goods_desc" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+        <Column name="cat_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="goods_sn" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="60" />
+        </Column>
+        <Column name="click_count" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="brand_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="SMALLINT UNSIGNED" size="5" />
+        </Column>
+        <Column name="price" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="DECIMAL" size="10,2" />
+        </Column>
+        <Column name="keyword" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="goods_brief" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="img_small" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="add_time" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+        <Column name="sort_order" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="is_delete" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="is_best" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="is_new" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_forum">
+      <Drawing expanded="true" location="5400,1273" dimensions="238,151" />
+      <Columns>
+        <Column name="forum_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="forumname" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="desc" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="topiccount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="INT" size="10" />
+        </Column>
+        <Column name="peoplecount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="INT" size="10" />
+        </Column>
+        <Column name="tag_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_islike">
+      <Drawing expanded="true" location="4768,10" dimensions="214,111" />
+      <Columns>
+        <Column name="islike_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="reply_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="type" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BIT" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_jtag">
+      <Drawing expanded="true" location="5554,652" dimensions="220,91" />
+      <Columns>
+        <Column name="jtag_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="tagname" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="forum_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_jtopic">
+      <Drawing expanded="true" location="5502,311" dimensions="217,91" />
+      <Columns>
+        <Column name="jtopic_id" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="topic_id" primary_key="true" foreign_key="true" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="jtag_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_reply">
+      <Drawing expanded="true" location="4755,251" dimensions="223,211" />
+      <Columns>
+        <Column name="reply_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="topic_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="author_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="p_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="title" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="content" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+        <Column name="posttime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+        <Column name="ipAddr" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="likecount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="INT" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_tag">
+      <Drawing expanded="true" location="5357,1674" dimensions="216,91" />
+      <Columns>
+        <Column name="tag_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="tagname" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="p_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_topic">
+      <Drawing expanded="true" location="5170,582" dimensions="251,231" />
+      <Columns>
+        <Column name="topic_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="title" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="content" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+        <Column name="posttime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+        <Column name="ipAddr" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="type" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="replycount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="INT" size="10" />
+        </Column>
+        <Column name="lastupdatetime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+        <Column name="author_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="forum_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_vote">
+      <Drawing expanded="true" location="5189,301" dimensions="213,111" />
+      <Columns>
+        <Column name="vote_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="topic_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="value" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="count" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="INT" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_s_voteuser">
+      <Drawing expanded="true" location="2970,20" dimensions="235,91" />
+      <Columns>
+        <Column name="voteuser_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="vote_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_album">
+      <Drawing expanded="true" location="2588,281" dimensions="241,151" />
+      <Columns>
+        <Column name="album_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="album_name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="authority" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="albumtag_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="album_time" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_collection_content">
+      <Drawing expanded="true" location="1154,662" dimensions="297,71" />
+      <Columns>
+        <Column name="collcontent_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="goods_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="MEDIUMINT UNSIGNED" size="8" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_collection">
+      <Drawing expanded="true" location="3912,271" dimensions="238,171" />
+      <Columns>
+        <Column name="coll_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="coll_desc" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="colltag_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="focus_count" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="coll_time" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_diary">
+      <Drawing expanded="true" location="3460,291" dimensions="233,131" />
+      <Columns>
+        <Column name="diary_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="content" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+        <Column name="diarytag_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="diary_time" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_fav_collection">
+      <Drawing expanded="true" location="3001,291" dimensions="248,131" />
+      <Columns>
+        <Column name="fav_coll_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="coll_desc" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="fav_colltag_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_favorite">
+      <Drawing expanded="true" location="2696,642" dimensions="216,111" />
+      <Columns>
+        <Column name="fav_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="favid" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="fav_type" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_follower">
+      <Drawing expanded="true" location="4449,652" dimensions="215,91" />
+      <Columns>
+        <Column name="foll_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user2_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_message">
+      <Drawing expanded="true" location="3813,622" dimensions="247,151" />
+      <Columns>
+        <Column name="message_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="send_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="rece_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="content" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+        <Column name="is_read" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="message_time" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_photo">
+      <Drawing expanded="true" location="2592,0" dimensions="232,131" />
+      <Columns>
+        <Column name="photo_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="album_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="img" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="photo_desc" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="photo_time" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_reply">
+      <Drawing expanded="true" location="4121,622" dimensions="228,151" />
+      <Columns>
+        <Column name="reply_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="replyid" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="reply_type" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="content" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="TEXT" size="65535" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="reply_time" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_share">
+      <Drawing expanded="true" location="3508,622" dimensions="230,151" />
+      <Columns>
+        <Column name="share_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="share_type" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="shareid" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="share_desc" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="share_time" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATETIME" size="19" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_tags">
+      <Drawing expanded="true" location="3187,642" dimensions="221,111" />
+      <Columns>
+        <Column name="tags_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="tag_type" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="tag_name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_user_tag">
+      <Drawing expanded="true" location="4842,652" dimensions="228,91" />
+      <Columns>
+        <Column name="usertag_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="value" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="t_u_user">
+      <Drawing expanded="true" location="3847,1213" dimensions="270,271" />
+      <Columns>
+        <Column name="user_id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="img" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="email" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="password" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="phonenum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="username" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="user_desc" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR" size="255" />
+        </Column>
+        <Column name="new_album_reply" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="new_tie_reply" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="user_score" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="INT UNSIGNED" size="10" />
+        </Column>
+        <Column name="user_grade" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+        <Column name="is_personal" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="BIT" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="fk_attrrange_attrid">
+      <Details primary_table="t_g_attribute" foreign_table="t_g_attr_range">
+        <PrimaryKeys>
+          <ColumnName name="attr_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="attr_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_atti_cat">
+      <Details primary_table="t_g_category" foreign_table="t_g_attribute">
+        <PrimaryKeys>
+          <ColumnName name="cat_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="cat_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_cat_cat">
+      <Details primary_table="t_g_category" foreign_table="t_g_category">
+        <PrimaryKeys>
+          <ColumnName name="cat_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="p_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_commentbrief_user">
+      <Details primary_table="t_u_user" foreign_table="t_g_comment_brief">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_commentbrief_goods">
+      <Details primary_table="t_g_goods" foreign_table="t_g_comment_brief">
+        <PrimaryKeys>
+          <ColumnName name="goods_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="goods_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_commentlong_goods">
+      <Details primary_table="t_g_goods" foreign_table="t_g_comment_long">
+        <PrimaryKeys>
+          <ColumnName name="goods_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="goods_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_commentlong_user">
+      <Details primary_table="t_u_user" foreign_table="t_g_comment_long">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_goodsattr_attrid">
+      <Details primary_table="t_g_attribute" foreign_table="t_g_goods_attr">
+        <PrimaryKeys>
+          <ColumnName name="attr_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="attr_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_goodsattr_goodsid">
+      <Details primary_table="t_g_goods" foreign_table="t_g_goods_attr">
+        <PrimaryKeys>
+          <ColumnName name="goods_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="goods_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_goodscat_catid">
+      <Details primary_table="t_g_category" foreign_table="t_g_goods_cat">
+        <PrimaryKeys>
+          <ColumnName name="cat_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="cat_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_goodscat_goodsid">
+      <Details primary_table="t_g_goods" foreign_table="t_g_goods_cat">
+        <PrimaryKeys>
+          <ColumnName name="goods_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="goods_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_goodsimg_goods">
+      <Details primary_table="t_g_goods" foreign_table="t_g_goods_img">
+        <PrimaryKeys>
+          <ColumnName name="goods_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="goods_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_goods_brand">
+      <Details primary_table="t_g_brand" foreign_table="t_g_goods">
+        <PrimaryKeys>
+          <ColumnName name="brand_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="brand_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_goods_cat">
+      <Details primary_table="t_g_category" foreign_table="t_g_goods">
+        <PrimaryKeys>
+          <ColumnName name="cat_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="cat_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_forum_tag">
+      <Details primary_table="t_s_tag" foreign_table="t_s_forum">
+        <PrimaryKeys>
+          <ColumnName name="tag_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="tag_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_islike_user">
+      <Details primary_table="t_u_user" foreign_table="t_s_islike">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_islike_reply">
+      <Details primary_table="t_s_reply" foreign_table="t_s_islike">
+        <PrimaryKeys>
+          <ColumnName name="reply_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="reply_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_jtag_forum">
+      <Details primary_table="t_s_forum" foreign_table="t_s_jtag">
+        <PrimaryKeys>
+          <ColumnName name="forum_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="forum_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_jtopic_jtag">
+      <Details primary_table="t_s_jtag" foreign_table="t_s_jtopic">
+        <PrimaryKeys>
+          <ColumnName name="jtag_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="jtag_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_jtopic_topic">
+      <Details primary_table="t_s_topic" foreign_table="t_s_jtopic">
+        <PrimaryKeys>
+          <ColumnName name="topic_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="topic_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_reply_author">
+      <Details primary_table="t_u_user" foreign_table="t_s_reply">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="author_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_reply_topic">
+      <Details primary_table="t_s_topic" foreign_table="t_s_reply">
+        <PrimaryKeys>
+          <ColumnName name="topic_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="topic_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_reply_reply">
+      <Details primary_table="t_s_reply" foreign_table="t_s_reply">
+        <PrimaryKeys>
+          <ColumnName name="reply_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="p_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_tag_tag">
+      <Details primary_table="t_s_tag" foreign_table="t_s_tag">
+        <PrimaryKeys>
+          <ColumnName name="tag_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="p_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_topic_author">
+      <Details primary_table="t_u_user" foreign_table="t_s_topic">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="author_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_topic_forum">
+      <Details primary_table="t_s_forum" foreign_table="t_s_topic">
+        <PrimaryKeys>
+          <ColumnName name="forum_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="forum_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_vote_topic">
+      <Details primary_table="t_s_topic" foreign_table="t_s_vote">
+        <PrimaryKeys>
+          <ColumnName name="topic_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="topic_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_voteuser_vote">
+      <Details primary_table="t_s_vote" foreign_table="t_s_voteuser">
+        <PrimaryKeys>
+          <ColumnName name="vote_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="vote_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_voteuser_user">
+      <Details primary_table="t_u_user" foreign_table="t_s_voteuser">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_album_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_album">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_albumtagid_tag">
+      <Details primary_table="t_u_tags" foreign_table="t_u_album">
+        <PrimaryKeys>
+          <ColumnName name="tags_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="albumtag_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_coll_goods">
+      <Details primary_table="t_g_goods" foreign_table="t_u_collection_content">
+        <PrimaryKeys>
+          <ColumnName name="goods_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="goods_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_coll_tag">
+      <Details primary_table="t_u_tags" foreign_table="t_u_collection">
+        <PrimaryKeys>
+          <ColumnName name="tags_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="colltag_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_coll_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_collection">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_diary_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_diary">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_diary_tag">
+      <Details primary_table="t_u_tags" foreign_table="t_u_diary">
+        <PrimaryKeys>
+          <ColumnName name="tags_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="diarytag_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_fcoll_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_fav_collection">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_fcoll_tag">
+      <Details primary_table="t_u_tags" foreign_table="t_u_fav_collection">
+        <PrimaryKeys>
+          <ColumnName name="tags_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="fav_colltag_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_fav_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_favorite">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_foll_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_follower">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_foll_user2">
+      <Details primary_table="t_u_user" foreign_table="t_u_follower">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user2_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_message_user2">
+      <Details primary_table="t_u_user" foreign_table="t_u_message">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="rece_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_message_user1">
+      <Details primary_table="t_u_user" foreign_table="t_u_message">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="send_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_photo_album">
+      <Details primary_table="t_u_album" foreign_table="t_u_photo">
+        <PrimaryKeys>
+          <ColumnName name="album_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="album_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_reply_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_reply">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_share_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_share">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_tags_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_tags">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="fk_tag_user">
+      <Details primary_table="t_u_user" foreign_table="t_u_user_tag">
+        <PrimaryKeys>
+          <ColumnName name="user_id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="user_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

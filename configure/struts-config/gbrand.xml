@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="struts-config/gattribute.xml"></include>
+	
+	<package name="gbrand" namespace="/" extends="base">
+		<!-- 产品分类Action-->
+         <action name="gbrand_*" class="cn.ssh.action.GBrandAction" method="{1}">
+        	<result name="show">/WEB-INF/jsp/gbrandAction/show.jsp</result>
+        	<result name="showtest">/WEB-INF/jsp/gbrandAction/showtest.jsp</result>
+      
+        	<result name="brandIndex">/WEB-INF/jsp/gbrandAction/brand-indexNew.jsp</result>
+        	<result name="introduce">/WEB-INF/jsp/gbrandAction/introduce.jsp</result>
+        	<result name="focusBrand" type="redirectAction">${focusPreUrl}</result> 
+       		<result name="NofocusBrand" type="redirectAction">${focusPreUrl}</result> 
+      
+        </action>
+        </package> 
+       <!--  分类属性Action -->
+	
+
+</struts>

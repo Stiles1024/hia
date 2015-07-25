@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="struts-config/gattribute.xml"></include>
+	
+	<package name="gcategory" namespace="/" extends="base">
+		<!-- 产品分类Action-->
+         <action name="gcategory_*" class="cn.ssh.action.GCategoryAction" method="{1}">
+        	<result name="list">/WEB-INF/jsp/gcategoryAction/list.jsp</result>
+        	<result name="saveUI">/WEB-INF/jsp/gcategoryAction/saveUI.jsp</result>
+        	<result name="tolist" type="redirectAction">gcategory_list?parentId=${parentId}</result>
+        	
+        	<result name="listAttribute" type="redirectAction">gattribute_list?catId=${parentId}</result>
+        	
+        </action>
+        </package> 
+       <!--  分类属性Action -->
+	
+
+</struts>

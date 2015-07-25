@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<package name="ggoods" namespace="/" extends="base">
+		<!-- 产品分类Action -->
+        <action name="ggoods_*" class="gGoodsAction" method="{1}">
+        	
+        	
+        	
+        	<result name="show">/WEB-INF/jsp/ggoodsAction/show.jsp</result>
+        	
+        	<result name="collection" type="redirectAction">ggoods_show?goodsId=${goodsId}</result>
+        	<result name="dream" type="redirectAction">ggoods_show?goodsId=${goodsId}&amp;is_dreamed=${is_dreamed}</result>
+        	<result name="Nodream" type="redirectAction">ggoods_show?goodsId=${goodsId}&amp;is_dreamed=${is_dreamed}</result>
+        	<result name="evaluate" type="redirectAction">gbrand_brandIndex.action</result>
+        	
+        </action>
+       <!--  商品Action -->
+	</package>
+
+</struts>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<package name="gattribute" namespace="/" extends="base">
+		<!-- 产品分类Action-->
+         <action name="gattribute_*" class="gAttributeAction" method="{1}">
+        	<result name="list">/WEB-INF/jsp/gattributeAction/list.jsp</result>
+        	<result name="saveUI">/WEB-INF/jsp/gattributeAction/saveUI.jsp</result>
+        	<result name="tolist" type="redirectAction">gattribute_list?catId=${catId}</result>
+        </action>  
+        </package> 
+       <!--  分类属性Action -->
+	
+
+</struts>
