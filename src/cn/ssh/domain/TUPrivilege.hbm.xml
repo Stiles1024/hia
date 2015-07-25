@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.ssh.domain">
+
+	<class name="TUPrivilege" table="t_u_privilege">
+		<id name="privilegeId">
+			<column name="privilege_id" />
+            <generator class="native"/>
+		</id>
+		<property name="name" />
+		<property name="url" />
+		
+		<!-- roles属性 本类与Role多对多关系 -->
+					<set name="roles" table="t_u_role_privilege" >
+						<key column="privilege_id"  foreign-key="none"></key>
+						<many-to-many class="TURole" column="role_id" foreign-key="none"></many-to-many>
+					</set>
+					
+		<!-- parent属性 本类与Privilege多对一关系 -->
+					<many-to-one name="parent" class="TUPrivilege" column="parentId"  foreign-key="none"/>
+					
+		<!-- children属性 本类与Privilege一对多关系 -->
+					<set name="children"  cascade="delete" order-by="id ASC" lazy="false">
+						<key column="parentId"  foreign-key="none"></key>
+						<one-to-many class="TUPrivilege"/>
+					</set>
+	</class>
+	
+</hibernate-mapping>
